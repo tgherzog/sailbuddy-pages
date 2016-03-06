@@ -65,12 +65,12 @@ Also be sure to enable "Background Location Services" in your iOS settings.
 
 ### Apple Watch ### {#watch}
 
-Sail Buddy for Apple Watch displays the same information as the iOS app. Swipe left or right to switch between information types.
-
 <div class="clear-block" markdown="1">
 
 ![Sail Buddy watch menu](images/apple-watch-menu.png)
 {: .sidebar-image :}
+
+Sail Buddy for Apple Watch displays the same information as the iOS app. Swipe left or right to switch between information types.
 
 You can also control Sail Buddy via the watch, for instance, start/stop route tracking. Force-press the display to access the menu.
 
