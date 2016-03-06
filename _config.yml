@@ -1,8 +1,8 @@
 # Site settings
-title: Good Clean Read
+title: Sail Buddy App for iOS
 tag_text: Good Clean Read
-description: A responsive template for publishing single-page websites, articles that are easy on the eyes
-url: "http://sailbuddy.net"
+description: "Sail Buddy shows your boat's current location, speed and NMEA instrument data in a light-weight easy-to-read app"
+url: "http://sailbuddyapp.com"
 
 sass:
   sass_dir: css
