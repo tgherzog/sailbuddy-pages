@@ -48,7 +48,7 @@ Sail Buddy supports the following NMEA sentences:
 Category | Identifier | Definition
 ----     | ---------- | ----------
 Wind     | $WIMWV     | Speed and velocity
-Wind     | $WIBAT     | Battery level (for [SailTimer wind vane][sailtimer] )
+Wind     | $WIBAT     | Battery level (for [SailTimer wind vane][sailtimer])
 Depth    | $SDDBT     | Depth below transducer
 Depth    | $SDDBK     | Depth below keel
 Depth    | $SDDBS     | Depth below surface
