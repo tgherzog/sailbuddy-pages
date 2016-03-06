@@ -76,6 +76,11 @@ You can also control Sail Buddy via the watch, for instance, start/stop route tr
 
 </div>
 
+### Contact Information ### {#contact}
+
+* [Send me an email][contact]
+* [Find me on Twitter](http:/twitter.com.tgherzog)
+
 
 [sailtimer]: http://sailtimerwindvane.com
 [imux]:      http://brookhouseonline.com/imux.htm
