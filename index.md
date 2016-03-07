@@ -22,7 +22,7 @@ No sense reinventing the wheel.
 Here's what Sail Buddy does:
 
 * Displays course and speed in a large, easily read display
-* Displays NMEA data the same way: TCP and UDP connections are supported---[More on that later](#nmea)
+* Displays [NMEA data](#nmea) the same way: TCP and UDP connections are supported
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
   a map or exported in CSV, KML (for Google maps), XML or GeoJSON formats
 * iPhone, iPad and Apple Watch are all supported (Android is not, sorry)
@@ -35,8 +35,8 @@ useful so long as I can keep it fast and light. If you have ideas or are experie
 
 ### NMEA Operation ### {#nmea}
 
-Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Typically, you would
-connect to a multiplexer such as the [Brookhouse iMux][imux] or another device like the [SailTimer wind vane][sailtimer] that creates its own
+Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Typically, you
+connect to a wifi multiplexer such as the [Brookhouse iMux][imux] or another device like the [SailTimer wind vane][sailtimer] that creates its own
 wifi network. To get connected:
 
 1. Go to iPhone settings and choose the wifi network created by your hardware
