@@ -1,8 +1,10 @@
 # Site settings
 title: Sail Buddy App for iOS
 tag_text: Good Clean Read
-description: "Sail Buddy shows your boat's current location, speed and NMEA instrument data in a light-weight easy-to-read app"
+description: "Sail Buddy shows your boat's current location, speed and NMEA instrument data in a light-weight easy-to-read app."
 url: "http://sailbuddyapp.com"
+fb_image: "images/sailbuddy-iPhone5s.png"
+app_store_download: "https://itunes.apple.com/us/app/sail-buddy/id1100095207?mt=8"
 
 sass:
   sass_dir: css
