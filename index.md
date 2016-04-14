@@ -7,6 +7,9 @@ Sail Buddy is a light-weight sailing app designed to do a few things well. When 
 I wanted a light-weight app that would show course, speed, and wind data from my [SailTimer wind vane][sailtimer]
 without a lot of fuss, and without tripping around other features which 90% of the time I don't use or want.
 
+[![Download Sail Buddy from the App Store](images/app_store_download.svg)][store]
+{: .app-store :}
+
 <div class="screenshots clear-block" markdown="1">
 
 ![iPhone 5S](images/sailbuddy-iPhone5s.png)
@@ -81,11 +84,14 @@ You can also control Sail Buddy via the watch, for instance, start/stop route tr
 * [Send me an email][contact]
 * [Find me on Twitter](http://twitter.com/tgherzog)
 
+[![Download Sail Buddy from the App Store](images/app_store_download.svg)][store]
+{: .app-store :}
 
 [sailtimer]: http://sailtimerwindvane.com
 [imux]:      http://brookhouseonline.com/imux.htm
 [nmea]:      https://en.wikipedia.org/wiki/NMEA_0183
 [contact]:   mailto:sailbuddyapp@gmail.com
+[store]:     {{ site.app_store_download }}
 
 [ex1]: https://itunes.apple.com/us/app/inavx-marine-navigation-noaa/id286616280?mt=8
 [ex2]: https://itunes.apple.com/us/app/aqua-map-usa-pro-marine-gps/id700695449?mt=8
