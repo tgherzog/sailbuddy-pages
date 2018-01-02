@@ -4,7 +4,7 @@ title: Sail Buddy
 ---
 
 Sail Buddy is a light-weight sailing app designed to do a few things well. When it comes to sailing I'm mostly a day sailer or a cruiser.
-I wanted a light-weight app that would show course, speed, and wind data from my [SailTimer wind vane][sailtimer]
+I wanted a light-weight app that would show course, speed, and wind data from my [SailTimer wind instrument][sailtimer2]
 without a lot of fuss, and without tripping around other features which 90% of the time I don't use or want.
 
 [![Download Sail Buddy from the App Store](images/app_store_download.svg)][store]
@@ -12,10 +12,29 @@ without a lot of fuss, and without tripping around other features which 90% of t
 
 <div class="screenshots clear-block" markdown="1">
 
-![iPhone 5S](images/sailbuddy-iPhone5s.png)
+<div class="captioned iPhone6s" markdown="1">
+![iPhone 6S](images/sailbuddy-iPhone6s-instruments.png)
 
+Large, easy to read format
+</div>
+
+<div class="captioned iPhone6s" markdown="1">
+![iPhone 6S](images/sailbuddy-iPhone6s-map.png)
+
+Display recorded data via maps
+</div>
+
+<div class="captioned iPhone6s" markdown="1">
+![iPhone 6S](images/sailbuddy-iPhone6s-shortcut.png)
+
+Shortcuts for fast operation
+</div>
+
+<div class="captioned watches" markdown="1">
 ![Apple Watch 1](images/sailbuddy-watch1.png) ![Apple Watch 2](images/sailbuddy-watch2.png)
-{: .watches :}
+
+Full iWatch support
+</div>
 
 </div>
 
@@ -38,20 +57,40 @@ useful so long as I can keep it fast and light. If you have ideas or are experie
 
 ### NMEA Operation ### {#nmea}
 
-Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Typically, you
-connect to a wifi multiplexer such as the [Brookhouse iMux][imux] or another device like the [SailTimer wind vane][sailtimer] that creates its own
-wifi network. To get connected:
+Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Here are some typical setups:
+
+#### WiFi ####
+
+WiFi-based hardware such as the
+[Brookhouse iMux][imux] multiplexer or the [SailTimer wind vane][sailtimer1] create their own WiFi networks.
 
 1. Go to iPhone settings and choose the wifi network created by your hardware
-2. Tap the Settings icon in Sail Buddy and enter the network settings for your hardware
-3. Tap the NMEA button in Sail Buddy's Instruments tab 
+2. Tap the Settings icon in Sail Buddy, then tap the **NMEA Configuration** button and enter the network settings for your hardware
+3. Also enable the appropriate options under Hardware Support for your hardware
+4. Tap the NMEA button in Sail Buddy's Instruments tab
+
+##### SailTimer Wind Instrument #####
+
+The [SailTimer wind instrument][sailtimer2] is an upgrade to the [SailTimer wind vane][sailtimer2]. It eliminates the blue transmission box and connects directly
+to your iPhone via a custom app.
+
+1. Download the [SailTimer API][stapi] from the App Store
+2. Launch the SailTimer API, connect to the wind instrument, and confirm it is receiving data
+3. Launch Sail Buddy, tap the Settings icon, then tap the **NMEA Configuration** button and enter these settings:
+   * Connection Type: **UDP**
+   * Port: **55554**
+   * Displayed Data Types: **Wind Speed & Direction**
+   * Hardware Support: **SailTimer Wind Instrument**
+4. Tap the NMEA button in Sail Buddy's Instruments tab
 
 Sail Buddy supports the following NMEA sentences:
 
 Category | Identifier | Definition
 ----     | ---------- | ----------
-Wind     | $WIMWV     | Speed and velocity
-Wind     | $WIBAT     | Battery level (for [SailTimer wind vane][sailtimer])
+Wind     | $WIMWV     | Speed and direction
+Wind     | $WIMWD     | Speed and direction (relative to true and magnetic north)
+Wind     | $PSTW      | Speed and direction (relative to current heading). See [SailTimer wind instrument][sailtimer2]
+Wind     | $WIBAT     | Battery level (for [SailTimer wind vane][sailtimer1])
 Depth    | $SDDBT     | Depth below transducer
 Depth    | $SDDBK     | Depth below keel
 Depth    | $SDDBS     | Depth below surface
@@ -87,7 +126,8 @@ You can also control Sail Buddy via the watch, for instance, start/stop route tr
 [![Download Sail Buddy from the App Store](images/app_store_download.svg)][store]
 {: .app-store :}
 
-[sailtimer]: http://sailtimerwindvane.com
+[sailtimer1]: http://sailtimerwindvane.com
+[sailtimer2]: http://www.sailtimerwind.com
 [imux]:      http://brookhouseonline.com/imux.htm
 [nmea]:      https://en.wikipedia.org/wiki/NMEA_0183
 [contact]:   mailto:sailbuddyapp@gmail.com
@@ -96,5 +136,6 @@ You can also control Sail Buddy via the watch, for instance, start/stop route tr
 [ex1]: https://itunes.apple.com/us/app/inavx-marine-navigation-noaa/id286616280?mt=8
 [ex2]: https://itunes.apple.com/us/app/aqua-map-usa-pro-marine-gps/id700695449?mt=8
 [ex3]: https://itunes.apple.com/us/app/i-boating-gps-nautical-marine/id994992062?mt=8
+[stapi]: https://itunes.apple.com/us/app/sailtimer-api/id959558893?mt=8
 
 

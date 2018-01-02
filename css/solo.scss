@@ -177,13 +177,31 @@ word-wrap: break-word;
 	  vertical-align: middle;
 	  float: left;
 	  padding-right: 1em;
+      margin-bottom: 1em;
 	}
+
+    p {
+      font-size: 0.75em;
+      text-align: center;
+      margin: 0;
+    }
+
+    img {
+      margin-bottom: 0;
+    }
   }
 
   .watches {
     img {
 	  max-width: 200px;
+      margin-bottom: 18px;
 	}
+  }
+
+  .iPhone6s {
+    img {
+      max-width: 300px;
+    }
   }
 
   .sidebar-image {
