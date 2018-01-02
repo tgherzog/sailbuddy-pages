@@ -20,3 +20,4 @@ exclude:
 - LICENSE
 - CNAME
 - css/rrssb.css
+- images/*.idraw
