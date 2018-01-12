@@ -62,7 +62,8 @@ Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format
 #### WiFi ####
 
 WiFi-based hardware such as the
-[Brookhouse iMux][imux] multiplexer or the [SailTimer wind vane][sailtimer1] create their own WiFi networks.
+[Brookhouse iMux][imux] multiplexer, the [SailTimer AirLink][airlink]  or the
+[SailTimer wind vane][sailtimer1] (discontinued in 2013) create their own WiFi networks.
 
 1. Go to iPhone settings and choose the wifi network created by your hardware
 2. Tap the Settings icon in Sail Buddy, then tap the **NMEA Configuration** button and enter the network settings for your hardware
@@ -71,8 +72,7 @@ WiFi-based hardware such as the
 
 ##### SailTimer Wind Instrument #####
 
-The [SailTimer wind instrument][sailtimer2] is an upgrade to the [SailTimer wind vane][sailtimer2]. It eliminates the blue transmission box and connects directly
-to your iPhone via a custom app.
+The [SailTimer wind instrument][sailtimer2] connects directly to your iPhone via [Bluetooth][bt] using a custom app.
 
 1. Download the [SailTimer API][stapi] from the App Store
 2. Launch the SailTimer API, connect to the wind instrument, and confirm it is receiving data
@@ -127,15 +127,17 @@ You can also control Sail Buddy via the watch, for instance, start/stop route tr
 {: .app-store :}
 
 [sailtimer1]: http://sailtimerwindvane.com
-[sailtimer2]: http://www.sailtimerwind.com
-[imux]:      http://brookhouseonline.com/imux.htm
-[nmea]:      https://en.wikipedia.org/wiki/NMEA_0183
-[contact]:   mailto:sailbuddyapp@gmail.com
-[store]:     {{ site.app_store_download }}
+[sailtimer2]: http://www.sailtimerwind.com/sailbuddy
+[airlink]:    http://www.sailtimerwind.com/airlink
+[imux]:       http://brookhouseonline.com/imux.htm
+[nmea]:       https://en.wikipedia.org/wiki/NMEA_0183
+[contact]:    mailto:sailbuddyapp@gmail.com
+[store]:      {{ site.app_store_download }}
 
-[ex1]: https://itunes.apple.com/us/app/inavx-marine-navigation-noaa/id286616280?mt=8
-[ex2]: https://itunes.apple.com/us/app/aqua-map-usa-pro-marine-gps/id700695449?mt=8
-[ex3]: https://itunes.apple.com/us/app/i-boating-gps-nautical-marine/id994992062?mt=8
+[ex1]:   https://itunes.apple.com/us/app/inavx-marine-navigation-noaa/id286616280?mt=8
+[ex2]:   https://itunes.apple.com/us/app/aqua-map-usa-pro-marine-gps/id700695449?mt=8
+[ex3]:   https://itunes.apple.com/us/app/i-boating-gps-nautical-marine/id994992062?mt=8
 [stapi]: https://itunes.apple.com/us/app/sailtimer-api/id959558893?mt=8
 
 
+[bt]:    https://en.wikipedia.org/wiki/Bluetooth
