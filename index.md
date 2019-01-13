@@ -46,7 +46,9 @@ Here's what Sail Buddy does:
 * Displays course and speed in a large, easily read display
 * Displays [NMEA data](#nmea) the same way: TCP and UDP connections are supported
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
-  a map or exported in CSV, KML (for Google maps), XML or GeoJSON formats
+  a map or exported in CSV, KML (for Google maps), GPX/XML, JSON or GeoJSON formats
+* Saved trips can be transferred between iOS devices that support AirDrop. Click the Share icon and choose "JSON (native)" format to transfer the trip
+  to Sail Buddy running on a different device. This feature is nice for sharing trips with a friend, or viewing a trip on an iPad or larger display.
 * iPhone, iPad and Apple Watch are all supported (Android is not, sorry)
 
 ### Tell me what you think! ###
@@ -117,6 +119,30 @@ Sail Buddy for Apple Watch displays the same information as the iOS app. Swipe l
 You can also control Sail Buddy via the watch, for instance, start/stop route tracking. Force-press the display to access the menu.
 
 </div>
+
+### Troubleshooting ###
+
+**Sail Buddy doesn't display NMEA data**
+
+Check the following:
+
+* Your NMEA device is turned on, sending data, and hasn't crashed
+* Your iPhone is connected to your NMEA device's wifi network (if your device creates its own network), or your iPhone and
+  your NMEA device are connected to the same network
+* The NMEA button is "on" in the upper right corner of the Instruments tab in Sail Buddy
+* Try receiving data in another NMEA app, or the device's native app if any
+
+**I'm receiving some NMEA data, but not wind angle**
+
+Some devices transmit wind data relative to compass north, while others trasmit relative to your current heading. An option in the Settings
+tab lets you specify which reference point to use, and uses your current heading to convert one to the other if necessary. But if you're not
+moving, Sail Buddy can't make this calculation. To correct for this, your boat should be moving, or you should change the option in Settings
+to match the native data sent by your device.
+
+### Privacy Policy ### {#privacy}
+
+All personal information collected by Sail Buddy, including your location and any metadata you enter yourself, is only stored on your iOS
+device Sail Buddy does not interact with a data server and does not access or store information remotely.
 
 ### Contact Information ### {#contact}
 
