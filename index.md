@@ -89,21 +89,24 @@ Sail Buddy supports the following NMEA sentences:
 
 Category | Identifier | Definition
 ----     | ---------- | ----------
-Wind     | $WIMWV     | Speed and direction
-Wind     | $WIMWD     | Speed and direction (relative to true and magnetic north)
-Wind     | $PSTW      | Speed and direction (relative to current heading). See [SailTimer wind instrument][sailtimer2]
-Wind     | $WIBAT     | Battery level (for [SailTimer wind vane][sailtimer1])
-Depth    | $SDDBT     | Depth below transducer
-Depth    | $SDDBK     | Depth below keel
-Depth    | $SDDBS     | Depth below surface
-Depth    | $SDDPT     | Depth (below surface or keel)
-
-GPS sentences such as $GPGGA are not directly supported since Sail Buddy gets GPS information directly from the Location Services built into
-your iOS device.
+Location | ??GGA      | GPS Location (if location source is set to "NMEA Data")
+Location | ??RMC      | Recommended Minimum Navigation Information (if location source is set to "NMEA Data")
+Wind     | ??MWV      | Speed and direction
+Wind     | ??MWD      | Speed and direction (relative to true and magnetic north)
+Wind     | PSTW       | Speed and direction (relative to current heading). See [SailTimer wind instrument][sailtimer2]
+Wind     | WIBAT      | Battery level (for [SailTimer wind vane][sailtimer1])
+Depth    | ??DBT      | Depth below transducer
+Depth    | ??DBK      | Depth below keel
+Depth    | ??DBS      | Depth below surface
+Depth    | ??DPT      | Depth (below surface or keel)
 
 If your device is not supported, please [contact me][contact] and we can try to work something out.
 
-**Note:** NMEA mode works best if GPS mode is also enabled. Otherwise, data may not be monitored correctly if the app is running in the background.
+**Notes:**
+
+1. Sail Buddy can obtain your location either from your iPhone/iPad's built-in GPS (i.e., Location Services) or
+from your NMEA devices. The switch is in Settings/NMEA Configuration.
+2. NMEA mode works best if GPS mode is also enabled. Otherwise, data may not be monitored correctly if the app is running in the background.
 Also be sure to enable "Background Location Services" in your iOS settings.
 
 
