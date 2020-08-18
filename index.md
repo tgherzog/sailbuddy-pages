@@ -3,7 +3,7 @@ layout: default
 title: Sail Buddy
 ---
 
-Sail Buddy is a light-weight sailing app designed to do a few things well. When it comes to sailing I'm mostly a day sailer or a cruiser.
+Sail Buddy is a light-weight sailing app designed to do a few things well. When it comes to sailing I'm mostly a day sailer or a short-trip cruiser.
 I wanted a light-weight app that would show course, speed, and wind data from my [SailTimer wind instrument][sailtimer2]
 without a lot of fuss, and without tripping around other features which 90% of the time I don't use or want.
 
