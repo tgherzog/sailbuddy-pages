@@ -135,6 +135,14 @@ Check the following:
 * The NMEA button is "on" in the upper right corner of the Instruments tab in Sail Buddy
 * Try receiving data in another NMEA app, or the device's native app if any
 
+**I get a network error when I turn on NMEA data**
+
+* Your iPhone is connected to your NMEA device's wifi network (if your device creates its own network), or your iPhone and
+  your NMEA device are connected to the same network
+* Check to make sure your iPhone is not in airplane mode
+* Try turning off "Monitor Network Status" in Settings > Sail Buddy (from your home screen). This disables Sail Buddy's 
+  default check for network availability, which may be incompatible with the custom hardware of some networks.
+
 **I'm receiving some NMEA data, but not wind angle**
 
 Some devices transmit wind data relative to compass north, while others trasmit relative to your current heading. An option in the Settings
@@ -142,10 +150,16 @@ tab lets you specify which reference point to use, and uses your current heading
 moving, Sail Buddy can't make this calculation. To correct for this, your boat should be moving, or you should change the option in Settings
 to match the native data sent by your device.
 
+**Nope, none of that solves my problem**
+
+Sail Buddy has a feature that lets you send me a text log of your data sessions. First, from your home screen, go to Settings > Sail Buddy, scroll down a bit,
+and make sure the "Log Status Messages" option is turned on. Then try to use the app again, i.e. whatever isn't working for you. When
+you've finished, click the Settings tab in Sail Buddy, scroll to the bottom and click the "Share Status Logs" button to send me your data.
+
 ### Privacy Policy ### {#privacy}
 
 All personal information collected by Sail Buddy, including your location and any metadata you enter yourself, is only stored on your iOS
-device Sail Buddy does not interact with a data server and does not access or store information remotely.
+device. Sail Buddy does not interact with a data server and does not access or store information remotely.
 
 ### Contact Information ### {#contact}
 
