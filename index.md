@@ -3,7 +3,7 @@ layout: default
 title: Sail Buddy
 ---
 
-Sail Buddy is a light-weight sailing app designed to do a few things well. When it comes to sailing I'm mostly a day sailer or a short-trip cruiser.
+Sail Buddy is a light-weight sailing app designed to do a few things well. When it comes to sailing I'm mostly a day sailor or a short-trip cruiser.
 I wanted a light-weight app that would show course, speed, and wind data from my [SailTimer wind instrument][sailtimer2]
 without a lot of fuss, and without tripping around other features which 90% of the time I don't use or want.
 
@@ -53,7 +53,7 @@ Here's what Sail Buddy does:
 
 ### Tell me what you think! ###
 
-This is early software with lots of room for new ideas. I am very interested in making it more
+Sail Buddy is a work in progress with lots of room for new ideas. I am very interested in making it more
 useful so long as I can keep it fast and light. If you have ideas or are experiencing issues, please [contact me][contact].
 
 
@@ -91,9 +91,10 @@ Category | Identifier | Definition
 ----     | ---------- | ----------
 Location | ??GGA      | GPS Location (if location source is set to "NMEA Data")
 Location | ??RMC      | Recommended Minimum Navigation Information (if location source is set to "NMEA Data")
-Wind     | ??MWV      | Speed and direction
-Wind     | ??MWD      | Speed and direction (relative to true and magnetic north)
-Wind     | PSTW       | Speed and direction (relative to current heading). See [SailTimer wind instrument][sailtimer2]
+Wind     | ??MWV      | Wind speed and angle
+Wind     | ??MWD      | Wind direction and speed (relative to true and magnetic north)
+Wind     | ??VWR      | Relative wind speed and angle
+Wind     | PSTW       | Wind direction and speed (relative to current heading). See [SailTimer wind instrument][sailtimer2]
 Wind     | WIBAT      | Battery level (for [SailTimer wind vane][sailtimer1])
 Depth    | ??DBT      | Depth below transducer
 Depth    | ??DBK      | Depth below keel
@@ -134,11 +135,16 @@ Check the following:
   your NMEA device are connected to the same network
 * The NMEA button is "on" in the upper right corner of the Instruments tab in Sail Buddy
 * Try receiving data in another NMEA app, or the device's native app if any
+* Use the "Data Log" feature described below to save your session data to a log. Generate an email, and take a quick
+  look; don't send it yet. If you see "syntax error" messages, it's possible that one or more of your NMEA
+  devices is sending non-standard NMEA data. For example, one user's setup did not include the required "checksum"
+  attribute at the end of sentences (an asterisk/\* followed by 2 characters). If your data is missing checksums
+  but is otherwise okay, go to Settings > Sail Buddy and turn off the "Enforce Checksums" option.
 
 **I get a network error when I turn on NMEA data**
 
-* Your iPhone is connected to your NMEA device's wifi network (if your device creates its own network), or your iPhone and
-  your NMEA device are connected to the same network
+* Your iPhone is not connected to your NMEA device's wifi network (if your device creates its own network),
+  or your iPhone and your NMEA device are connected to the same network
 * Check to make sure your iPhone is not in airplane mode
 * Try turning off "Monitor Network Status" in Settings > Sail Buddy (from your home screen). This disables Sail Buddy's 
   default check for network availability, which may be incompatible with the custom hardware of some networks.
@@ -152,13 +158,24 @@ to match the native data sent by your device.
 
 **Nope, none of that solves my problem**
 
-Sail Buddy has a feature that lets you send me a text log of your data sessions. First, from your home screen, go to Settings > Sail Buddy, scroll down a bit,
-and make sure the "Log Status Messages" option is turned on. Then try to use the app again, i.e. whatever isn't working for you. When
-you've finished, click the Settings tab in Sail Buddy, scroll to the bottom and click the "Share Status Logs" button to send me your data.
+Use the "Data Log" feature described in the next session to log your session data, send it to me, and I'll try
+to help you out.
+
+### Raw Data Logs ###
+
+Sail Buddy has an option to save raw NMEA data and other information to a log file.
+This is primarily intended so that you can send the log file to me in case you encounter
+technical issues and need some support. Go to Settings > Sail Buddy (from your home screen), scroll down a bit,
+and turn on the
+"Log Status Messages" option. Sail Buddy will subsequently log NMEA sessions when you turn on NMEA data
+in Sail Buddy (it only keeps data for a day or so). Then go to the Settings tab in Sail Buddy and
+click the "Share Status Logs" button to email me your data. If you just want to view the log data, follow
+the same steps but don't click Send.
 
 ### Privacy Policy ### {#privacy}
 
-All personal information collected by Sail Buddy, including your location and any metadata you enter yourself, is only stored on your iOS
+All personal information collected by Sail Buddy, including your location, data logs,
+and any metadata you enter yourself, is only stored on your iOS
 device. Sail Buddy does not interact with a data server and does not access or store information remotely.
 
 ### Contact Information ### {#contact}

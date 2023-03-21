@@ -1,6 +1,6 @@
 Basic information page for the Sail Buddy iPhone App
 
-(c) 2016, Timothy Herzog
+(c) 2016-2023, Timothy Herzog
 
 ---
 
