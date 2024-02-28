@@ -13,19 +13,31 @@ without a lot of fuss, and without tripping around other features which 90% of t
 <div class="screenshots clear-block" markdown="1">
 
 <div class="captioned iPhone6s" markdown="1">
-![iPhone 6S](images/sailbuddy-iPhone6s-instruments.png)
+![iPhone 13](images/sailbuddy-iPhone13-instruments.png)
 
 Large, easy to read format
 </div>
 
 <div class="captioned iPhone6s" markdown="1">
-![iPhone 6S](images/sailbuddy-iPhone6s-map.png)
+![iPhone 13](images/sailbuddy-iPhone13-map.png)
 
 Display recorded data via maps
 </div>
 
 <div class="captioned iPhone6s" markdown="1">
-![iPhone 6S](images/sailbuddy-iPhone6s-shortcut.png)
+![iPhone 13](images/sailbuddy-iPhone13-monitor.png)
+
+Monitor, filter, and export raw NMEA data
+</div>
+
+<div class="captioned iPhone6s" markdown="1">
+![iPhone 13](images/sailbuddy-iPhone13-settings.png)
+
+Customize display, network, and data handling
+</div>
+
+<div class="captioned iPhone6s" markdown="1">
+![iPhone 13](images/sailbuddy-iPhone13-shortcut.png)
 
 Shortcuts for fast operation
 </div>
@@ -47,6 +59,7 @@ Here's what Sail Buddy does:
 * Displays [NMEA data](#nmea) the same way: TCP and UDP connections are supported
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
   a map or exported in CSV, KML (for Google maps), GPX/XML, JSON or GeoJSON formats
+* Monitors and displays all "raw" NMEA data on a [separate tab](#monitor). You can filter by NMEA code or export the raw data to assist in troubleshooting your setup.
 * Saved trips can be transferred between iOS devices that support AirDrop. Click the Share icon and choose "JSON (native)" format to transfer the trip
   to Sail Buddy running on a different device. This feature is nice for sharing trips with a friend, or viewing a trip on an iPad or larger display.
 * iPhone, iPad and Apple Watch are all supported (Android is not, sorry)
@@ -134,12 +147,13 @@ Check the following:
 * Your iPhone is connected to your NMEA device's wifi network (if your device creates its own network), or your iPhone and
   your NMEA device are connected to the same network
 * The NMEA button is "on" in the upper right corner of the Instruments tab in Sail Buddy
-* Try receiving data in another NMEA app, or the device's native app if any
-* Use the "Data Log" feature described below to save your session data to a log. Generate an email, and take a quick
-  look; don't send it yet. If you see "syntax error" messages, it's possible that one or more of your NMEA
-  devices is sending non-standard NMEA data. For example, one user's setup did not include the required "checksum"
-  attribute at the end of sentences (an asterisk/\* followed by 2 characters). If your data is missing checksums
-  but is otherwise okay, go to Settings > Sail Buddy and turn off the "Enforce Checksums" option.
+* Turn on the [Monitor tab](#monitor) and confirm that NMEA sentences are coming through correctly (the green-coded ones are those that Sail Buddy understands).
+  If some sentences are orange that indicates [checksum][checksum] failure (the 2-character code after the asterisk at the end of each sentence).
+  If your devices don't include checksums, you can disable this check in Settings > Sail Buddy
+* Use the [Status Log](#logs) feature to save your session data to a log. If you're seeing mysterious
+  errors here, send me the logs.
+* Try receiving data in another NMEA app, or the device's native app if any. It's possible your devices
+  aren't connected, aren't sending data, or the network settings are not correct in Sail Buddy's Settings tab.
 
 **I get a network error when I turn on NMEA data**
 
@@ -158,25 +172,42 @@ to match the native data sent by your device.
 
 **Nope, none of that solves my problem**
 
-Use the "Data Log" feature described in the next session to log your session data, send it to me, and I'll try
-to help you out.
+Use the [monitor](#monitor) and [status log](#logs) features described in the next sections to send me your data,
+and I'll try to help you out.
 
-### Raw Data Logs ###
+### NMEA Data Monitoring ### {#monitor}
 
-Sail Buddy has an option to save raw NMEA data and other information to a log file.
-This is primarily intended so that you can send the log file to me in case you encounter
-technical issues and need some support. Go to Settings > Sail Buddy (from your home screen), scroll down a bit,
-and turn on the
-"Log Status Messages" option. Sail Buddy will subsequently log NMEA sessions when you turn on NMEA data
-in Sail Buddy (it only keeps data for a day or so). Then go to the Settings tab in Sail Buddy and
-click the "Share Status Logs" button to email me your data. If you just want to view the log data, follow
+The Monitor tab shows a running display of all valid incoming NMEA messages, even those that Sail Buddy
+otherwise ignores. Use the button in the top left to turn the monitor on or off. In the Settings tab,
+click the Monitor button to include timestamps, or filter the monitor to just certain messages of interest.
+
+The display is color-coded by message status. Invalid messages appear in <span class="red">red</span>
+while messages that failed [checksum confirmation][checksum]
+appear in <span class="orange">orange</span>. (You can disable checksum verification in Settings > Sail Buddy).
+The codes for NMEA sentences that Sail Buddy handles appear in <span class="green">green</span> while
+those it doesn't appear in <span class="blue">blue</span>.
+
+You can export the NMEA monitor (the most recent 500 sentences) with the Share button in the upper right. Note the extra
+"Mail to Publisher" option, which lets you email the data directly to me in case you are having technical issues.
+
+### Status Logs ### {#logs}
+
+In addition to the [NMEA monitor](#monitor), Sail Buddy has an option to separately log low-level network events. This can be helpful
+if you aren't getting any data whatsoever (i.e. the Instrument display is blank, and the NMEA monitor is very sparse or empty), which might indicate
+a network connection issue or data parsing error.
+
+Go to Settings > Sail Buddy (from your home screen), scroll down a bit, and turn on the
+"Log Messages" option. Sail Buddy will now log subsequent log NMEA sessions, which you start and finish in the Instruments tab,
+keeping a log going back a day or two at any given time.  Then go to the Settings tab in Sail Buddy and
+click the "Share Logs" button to email me the log. If you just want to view the log data, follow
 the same steps but don't click Send.
 
 ### Privacy Policy ### {#privacy}
 
 All personal information collected by Sail Buddy, including your location, data logs,
 and any metadata you enter yourself, is only stored on your iOS
-device. Sail Buddy does not interact with a data server and does not access or store information remotely.
+device. Sail Buddy does not interact with a data server (other than your own devices)
+and does not access or store information remotely.
 
 ### Contact Information ### {#contact}
 
@@ -201,3 +232,4 @@ device. Sail Buddy does not interact with a data server and does not access or s
 
 
 [bt]:    https://en.wikipedia.org/wiki/Bluetooth
+[checksum]: https://rietman.wordpress.com/2008/09/25/how-to-calculate-the-nmea-checksum/
