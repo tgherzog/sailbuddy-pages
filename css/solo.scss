@@ -109,7 +109,15 @@ h3 {
 
 h4, h5, h6 {
   margin: 1.5rem -1rem 1.5rem -1rem;
+}
+
+h4 {
   font-size: 1.5rem;
+}
+
+h5, h6 {
+  margin: 1.5rem 0;
+  font-size: 1.25rem;
 }
 
 p, ul, ol, dl, table, pre, blockquote {
@@ -193,9 +201,15 @@ word-wrap: break-word;
 
   .watches {
     img {
-	  max-width: 200px;
+	  max-width: 172px;
       margin-bottom: 18px;
 	}
+  }
+
+  .iPad {
+    img {
+      max-width: 600px;
+    }
   }
 
   .iPhone6s {
@@ -210,8 +224,12 @@ word-wrap: break-word;
 
 	img {
 	  margin: 0;
-	  max-width: 150px;
+      max-width: 250px;
 	}
+
+    &.small img {
+      max-width: 150px;
+    }
   }
 }
 
