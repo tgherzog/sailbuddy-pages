@@ -24,7 +24,7 @@ Large, easy to read format
 <div class="captioned iPhone6s" markdown="1">
 ![iPhone 13](images/sailbuddy-iPhone13-analog.png)
 
-Analog-style, multi-instrument displays
+Analog-style, multi-function displays
 </div>
 
 <div class="captioned iPhone6s" markdown="1">
@@ -171,11 +171,11 @@ If your device is not supported, please [contact me][contact] and I can try to a
 {: .sidebar-image :}
 
 
-You may choose to show wind and/or satellite data in a "multi-view" analog-type display above the data table.
+You may choose to show wind and/or satellite data in an  analog-style multi-function display above the data table.
 Go to Settings / Display and turn on "Use Analog Display." 
 This option is enabled when you choose either of the "Wind Speed & Direction" or "Satellites" options above it. 
 Sail Buddy will move the corresponding indicators to a visual display above or alongside
-the data table. Course and speed will also move to the multi-view.
+the data table. Course and speed will also move to the analog display.
 
 If you choose to display analog wind data, the display will consist of instrument dials, one for apparent
 wind and the other for true wind. Swipe left or right on the dial to switch between them.
