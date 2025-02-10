@@ -96,36 +96,9 @@ Version 4 is the biggest update yet! The entire app has been redesigned with gre
 Sail Buddy is always evolving with lots of room for new ideas. I am very interested in making it more
 useful so long as I can keep it fast and light. If you have ideas or are experiencing issues, please [contact me][contact].
 
+### NMEA Support ###
 
-### NMEA Operation ### {#nmea}
-
-Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Here are some typical setups:
-
-#### WiFi ####
-
-WiFi-based hardware such as the
-[Brookhouse iMux][imux] multiplexer, the [SailTimer AirLink][airlink]  or the
-[SailTimer wind vane][sailtimer1] (discontinued in 2013) create their own WiFi networks.
-
-1. Go to iPhone settings and choose the wifi network created by your hardware
-2. Launch Sail Buddy, go to Settings / Connection and enter the network settings for your hardware
-3. Also enable the appropriate options under Hardware Support for your hardware
-4. Tap the NMEA button in Sail Buddy's Instruments tab
-
-##### SailTimer Wind Instrument #####
-
-The [SailTimer wind instrument][sailtimer2] connects directly to your iPhone via [Bluetooth][bt] using a custom app.
-
-1. Download the [SailTimer API][stapi] from the App Store
-2. Launch the SailTimer API, connect to the wind instrument, and confirm it is receiving data
-3. Launch Sail Buddy, go to Settings / Connection and enter these settings:
-   * Connection Type: **UDP**
-   * Port: **55554**
-   * Select **SailTimer Wind Instrument**
-4. In Settings / Display make sure **Wind Speed & Direction** is selected
-5. Tap the NMEA button in Sail Buddy's Instruments tab
-
-Sail Buddy supports the following NMEA sentences:
+Sail Buddy supports the following NMEA 0183 sentences:
 
 Category | Identifier | Definition
 ----     | ---------- | ----------
@@ -160,6 +133,34 @@ If your device is not supported, please [contact me][contact] and I can try to a
    heading (default) or compass north. Version 4 eliminates that option and displays both. Wind angle(s) are
    relative to your current heading, while wind *direction(s)* are relative to compass north. Both apparent
    and true values are shown.
+
+### Hardware Operation ### {#setup}
+
+Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format][nmea] over a TCP or UDP connection. Here are some typical setups:
+
+#### WiFi ####
+
+WiFi-based hardware such as the
+[Brookhouse iMux][imux] multiplexer, the [SailTimer AirLink][airlink]  or the
+[SailTimer wind vane][sailtimer1] (discontinued in 2013) create their own WiFi networks.
+
+1. Go to iPhone settings and choose the wifi network created by your hardware
+2. Launch Sail Buddy, go to Settings / Connection and enter the network settings for your hardware
+3. Also enable the appropriate options under Hardware Support for your hardware
+4. Tap the NMEA button in Sail Buddy's Instruments tab
+
+#### SailTimer Wind Instrument ####
+
+The [SailTimer wind instrument][sailtimer2] connects directly to your iPhone via [Bluetooth][bt] using a custom app.
+
+1. Download the [SailTimer API][stapi] from the App Store
+2. Launch the SailTimer API, connect to the wind instrument, and confirm it is receiving data
+3. Launch Sail Buddy, go to Settings / Connection and enter these settings:
+   * Connection Type: **UDP**
+   * Port: **55554**
+   * Select **SailTimer Wind Instrument**
+4. In Settings / Display make sure **Wind Speed & Direction** is selected
+5. Tap the NMEA button in Sail Buddy's Instruments tab
 
 
 ### Analog Wind & Satellite Displays ### {#analog}
