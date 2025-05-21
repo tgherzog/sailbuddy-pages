@@ -71,7 +71,7 @@ next to your favorite navigation app in split view.
   the raw data to assist in troubleshooting your setup.
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
   a map or exported in CSV, KML (for Google maps), GPX/XML, JSON or GeoJSON formats
-* Saved trips can be transferred between iOS devices that support AirDrop. Click the Share icon and choose
+* Saved trips (tracks) can be transferred between iOS devices that support AirDrop. Click the Share icon and choose
   "JSON (native)" format to transfer the trip
   to Sail Buddy running on a different device. This feature is nice for sharing trips with a friend, or viewing a trip on an iPad or larger display.
 * iPhone, iPad and Apple Watch are all supported.
@@ -222,10 +222,81 @@ You can export the NMEA monitor (the most recent 500 sentences) with the Share b
 Sail Buddy for Apple Watch displays most of the same information as the iOS app.
 Swipe left or right to switch between information types.
 
-You can also control Sail Buddy via the watch, for instance, start/stop route tracking.
+You can also control Sail Buddy via the watch, for instance, to start/stop route tracking.
 Force-press the display to access the menu.
 
 </div>
+
+### Tracking Triggers ### {#triggers}
+
+There are situations where you might want to start or stop route tracking automatically
+in response to certain data conditions. For example, you can automatically start
+tracking when your boat reaches a certain speed or when water depth or wind levels
+exceed minimum values. You can also trigger the tracking feature in response to NMEA
+data sentences (including proprietary sentences) that SailBuddy does not otherwise recognize.
+While this is considered an advanced
+feature, it can overcome a tendency to forget to turn on trip tracking until you are already
+well underway, and thus make the tracking feature much more useful.
+
+You configure Tracking Triggers in the Settings / Data tab. The Start and Stop fields
+consist of simple math expressions that, if they evaluate true will start or stop a new track.
+For data that SailBuddy recognizes, the expressions look like this:
+
+---------- | -----
+Expression | DBK>=10ft
+{: .trigger-ex :}
+
+This trigger will turn tracking on (or off) the first time your depth below keel exceeds
+or equals 10 feet.
+You can also trigger based on course & speed (cog, sog), wind speed & direction (awa, aws, awd,
+twa, tws, twd), depth (dbs, dbt, dbk) and location (lon, lat), although some of those are more
+useful than others. The unit of measurement is optional; meters and meters/second are assumed
+if you don't include that.
+
+For data that SailBuddy doesn't recognize, you can specify an NMEA-based expression like this:
+
+---------- | -----
+Expression | $SDMTW=26.8,C
+NMEA Ex:   | $SDMTW,26.8,C*45
+{: .trigger-ex :}
+
+
+This obviously arcane trigger will turn tracking on/off the first time your water temperature
+sensor reports a reading of exactly 26.8 degrees Celsius. This example shows how you can compare
+entire NMEA sentences, including the commas between fields but excluding the ending checksum
+value. However, you usually want to reference a single field or a subset of fields within an NMEA
+sentence, and for that you include 0-based field offsets. For instance, this example shows
+how you could turn off tracking when you arrive within 0.5 nm of a waypoint (the arrival distance
+is the 3rd field):
+
+---------- | -----
+Expression | $GPAAM(2)<=.5
+NMEA Ex:   | $GPAAM,A,A,0.50,N,WPT0001*43
+{: .trigger-ex :}
+
+Comparisons of multiple fields are also possible, albeit limited to exact comparisons (no greater
+or less than). Here, for example, you can turn off tracking when you arrive at a specific waypoint:
+
+---------- | -----
+Expression | $GPAAM(0,4)=A,WPT0001
+NMEA Ex:   | $GPAAM,A,A,0.50,N,WPT0001*43
+{: .trigger-ex :}
+
+
+#### Working With Triggers ####
+
+When a start or stop trigger is defined in Settings, the instrument display includes an extra button
+at the top to enable or disable the trigger feature. This gives you an easy to control how tracks are
+started and stopped. Often you want to trigger a track automatically but stop it manually (or vice versa),
+and once it's stopped you don't want to inadvertently trigger another track until you are ready. In that
+case you would disable triggers once a new track has commenced. To
+manually turn off an active track, switch to the Tracking tab and click the button at the top.
+
+For better or worse, this feature can create a bunch of separate tracks, which is sometimes a nuisance.
+Fortunately, you can easily delete tracks you don't want or merge separate tracks into a continuous track.
+In the Tracking tab, swipe left on a track to delete it or merge it with the one below it.
+
+
 
 ### Troubleshooting ###
 

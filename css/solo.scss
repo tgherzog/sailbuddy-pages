@@ -249,6 +249,10 @@ table {
   width: 100%;
   border: 1px solid #ccc;
   border-collapse: collapse;
+
+  &.trigger-ex {
+    width: auto;
+  }
 }
 
 tr:nth-child(even) {
