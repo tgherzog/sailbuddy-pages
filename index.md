@@ -273,7 +273,7 @@ and any metadata you enter yourself, is only stored on your iOS
 device. Sail Buddy does not interact with a data server (other than your own devices)
 and does not access or store information remotely. The only way your data can be accessed
 apart from the app is if you share it with someone as [described above](#monitor).
-Any data share with me is treated as confidential, and used only for bug testing and troubleshooting.
+Any data shared with me is treated as confidential, and used only for bug testing and troubleshooting.
 
 ### Contact Information ### {#contact}
 
