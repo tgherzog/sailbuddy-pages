@@ -106,7 +106,7 @@ Location | ??GGA      | GPS Location (if location source is set to "NMEA Data")
 Location | ??RMA      | Recommended minimum navigation information (if location source is set to "NMEA Data")
 Location | ??RMC      | Recommended minimum navigation information (if location source is set to "NMEA Data")
 Wind     | ??MWV      | Wind speed and angle
-Wind     | ??MWD      | Wind direction and speed
+Wind     | ??MWD      | Wind speed and direction
 Wind     | ??VWR      | Relative wind speed and angle
 Wind     | PSTW       | Wind angle and speed. See [SailTimer wind instrument][sailtimer2]
 Wind     | WIBAT      | Battery level (for [SailTimer wind vane][sailtimer1])
@@ -271,7 +271,9 @@ and I'll try to help you out.
 All personal information collected by Sail Buddy, including your location, data logs,
 and any metadata you enter yourself, is only stored on your iOS
 device. Sail Buddy does not interact with a data server (other than your own devices)
-and does not access or store information remotely.
+and does not access or store information remotely. The only way your data can be accessed
+apart from the app is if you share it with someone as [described above](#monitor).
+Any data share with me is treated as confidential, and used only for bug testing and troubleshooting.
 
 ### Contact Information ### {#contact}
 
