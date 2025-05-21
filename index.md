@@ -141,7 +141,9 @@ Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format
 #### WiFi ####
 
 WiFi-based hardware such as the
-[Brookhouse iMux][imux] multiplexer, the [SailTimer AirLink][airlink]  or the
+
+[Digital Yacht WLN30][wln30] multiplexer,
+the [SailTimer AirLink][airlink]  or the
 [SailTimer wind vane][sailtimer1] (discontinued in 2013) create their own WiFi networks.
 
 1. Go to iPhone settings and choose the wifi network created by your hardware
@@ -359,6 +361,7 @@ Any data shared with me is treated as confidential, and used only for bug testin
 [sailtimer2]: http://www.sailtimerwind.com/sailbuddy
 [airlink]:    http://www.sailtimerwind.com/airlink
 [imux]:       http://brookhouseonline.com/imux.htm
+[wln30]:      https://support.digitalyacht.co.uk/product/wln30-smart-wireless-nmea-multiplexer/
 [nmea]:       https://en.wikipedia.org/wiki/NMEA_0183
 [contact]:    mailto:sailbuddyapp@gmail.com
 [store]:      {{ site.app_store_download }}
