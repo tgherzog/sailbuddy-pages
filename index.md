@@ -244,8 +244,8 @@ You configure Tracking Triggers in the Settings / Data tab. The Start and Stop f
 consist of simple math expressions that, if they evaluate true will start or stop a new track.
 For data that SailBuddy recognizes, the expressions look like this:
 
----------- | -----
-Expression | DBK>=10ft
+------------------- | -----
+Trigger Expression: | DBK>=10ft
 {: .trigger-ex :}
 
 This trigger will turn tracking on (or off) the first time your depth below keel exceeds
@@ -257,9 +257,9 @@ if you don't include that.
 
 For data that SailBuddy doesn't recognize, you can specify an NMEA-based expression like this:
 
----------- | -----
-Expression | $SDMTW=26.8,C
-NMEA Ex:   | $SDMTW,26.8,C*45
+------------------- | -----
+Trigger Expression: | $SDMTW=26.8,C
+NMEA Sentence:      | `$SDMTW,26.8,C*45`
 {: .trigger-ex :}
 
 
@@ -271,17 +271,17 @@ sentence, and for that you include 0-based field offsets. For instance, this exa
 how you could turn off tracking when you arrive within 0.5 nm of a waypoint (the arrival distance
 is the 3rd field):
 
----------- | -----
-Expression | $GPAAM(2)<=.5
-NMEA Ex:   | $GPAAM,A,A,0.50,N,WPT0001*43
+------------------- | -----
+Trigger Expression: | $GPAAM(2)<=.5
+NMEA Sentence:      | `$GPAAM,A,A,0.50,N,WPT0001*43`
 {: .trigger-ex :}
 
 Comparisons of multiple fields are also possible, albeit limited to exact comparisons (no greater
 or less than). Here, for example, you can turn off tracking when you arrive at a specific waypoint:
 
----------- | -----
-Expression | $GPAAM(0,4)=A,WPT0001
-NMEA Ex:   | $GPAAM,A,A,0.50,N,WPT0001*43
+------------------- | -----
+Trigger Expression: | $GPAAM(0,4)=A,WPT0001
+NMEA Sentence:      | `$GPAAM,A,A,0.50,N,WPT0001*43`
 {: .trigger-ex :}
 
 
