@@ -288,7 +288,7 @@ NMEA Sentence:      | `$GPAAM,A,A,0.50,N,WPT0001*43`
 #### Working With Triggers ####
 
 When a start or stop trigger is defined in Settings, the instrument display includes an extra button
-at the top to enable or disable the trigger feature. This gives you an easy to control how tracks are
+at the top to enable or disable the trigger feature. This gives you an easy way to control how tracks are
 started and stopped. Often you want to trigger a track automatically but stop it manually (or vice versa),
 and once it's stopped you don't want to inadvertently trigger another track until you are ready. In that
 case you would disable triggers once a new track has commenced. To
