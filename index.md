@@ -72,23 +72,26 @@ next to your favorite navigation app in split view.
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
   a map or exported in CSV, KML (for Google maps), GPX/XML, JSON or GeoJSON formats
 * Saved trips (tracks) can be transferred between iOS devices that support AirDrop. Click the Share icon and choose
-  "JSON (native)" format to transfer the trip
+  "JSON (Sail Buddy)" format to transfer the trip
   to Sail Buddy running on a different device. This feature is nice for sharing trips with a friend, or viewing a trip on an iPad or larger display.
 * iPhone, iPad and Apple Watch are all supported.
 
-##### New in Version 4 #####
+##### New in Version 5 #####
 
-Version 4 is the biggest update yet! The entire app has been redesigned with great new features including:
+Version 5 allows you full control over the selection of data fields, their order and appearance.
+You can optimize the display to match your boat and your style of navigation:
 
-* Much improved data table display. On larger and landscape orientations, the layout adjusts to make
-  maximum use of space
-* Analog display option lets you see course, speed and wind together in an integrated dial. Swipe left
-  or right to toggle between apparent and true wind.
-* Full support for "dark mode," which you can set in the Settings App (Display & Brightness) or in the control center.
-* Satellite data is available if location is sourced from NMEA data. You can see satellite location,
-  signal strength and status in the analog display.
-* Completely redesigned Settings tab makes features more accessible and easier to understand, with
-  improved inline help.
+* Click the Configure button in the top right corner of the instruments view to add or configure fields
+* Click the Add button to add new fields to the display
+* Click any field to change its label or background color
+* Drag fields to change their order
+
+Additionally you can:
+
+* Display local time or GMT in the data table
+* Display Depth Below Keel (DBK) or Below Surface (DBS) directly from your depth gauge, or
+  have Sail Buddy calculate these for you based on Depth Below Transducer (DBT)
+* Several other options in Settings have been simplified
 
 
 ### Tell me what you think! ###
@@ -140,9 +143,7 @@ Sail Buddy can read and display instrument data transmitted in [NMEA 0183 format
 
 #### WiFi ####
 
-WiFi-based hardware such as the
-
-[Digital Yacht WLN30][wln30] multiplexer,
+WiFi-based hardware such as the [Digital Yacht WLN30][wln30] multiplexer,
 the [SailTimer AirLink][airlink]  or the
 [SailTimer wind vane][sailtimer1] (discontinued in 2013) create their own WiFi networks.
 
@@ -165,7 +166,7 @@ The [SailTimer wind instrument][sailtimer2] connects directly to your iPhone via
 5. Tap the NMEA button in Sail Buddy's Instruments tab
 
 
-### Analog Wind & Satellite Displays ### {#analog}
+### Analog Wind & Satellite Gauges ### {#analog}
 
 
 <div class="clear-block" markdown="1">
@@ -175,13 +176,9 @@ The [SailTimer wind instrument][sailtimer2] connects directly to your iPhone via
 
 
 You may choose to show wind and/or satellite data in an  analog-style multi-function display above the data table.
-Go to Settings / Display and turn on "Use Analog Display." 
-This option is enabled when you choose either of the "Wind Speed & Direction" or "Satellites" options above it. 
-Sail Buddy will move the corresponding indicators to a visual display above or alongside
-the data table. Course and speed will also move to the analog display.
-
-If you choose to display analog wind data, the display will consist of instrument dials, one for apparent
-wind and the other for true wind. Swipe left or right on the dial to switch between them.
+Go to Settings / Display and turn on either Wind or Satellites under "Use Gauges". The Wind option
+add two instrument dials, one for apparent wind and another for true wind. Satellite position is
+displayed on its own dial. Swipe left or right on the dial to switch between them.
 
 </div>
 
@@ -190,10 +187,10 @@ wind and the other for true wind. Swipe left or right on the dial to switch betw
 ![analog satellites display](images/analog-satellite.png)
 {: .sidebar-image :}
 
-Current satellites "in view" are shown on a separate dial that provides satellite location (compass north is at
-the top), signal strength, and status. Satellites with a signal-to-noise ratio (SNR) above 40 are shown
-in a green circle while those with an SNR between 25 and 40 are shown in a yellow circle. Below 25 is shown
-in red. Active satellites, used to obtain a fix, are shown in boldface.
+The satellite gauge shows the location (compass north is at the top), signal strength, and status of all
+satellites "in view." Satellites with a signal-to-noise ratio (SNR) above 40 are shown
+as green circles while those with an SNR between 25 and 40 are shown as yellow circles. Below 25 is shown
+as red circles. Active satellites, used to obtain a fix, are shown in boldface.
 
 </div>
 
