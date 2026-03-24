@@ -65,8 +65,9 @@ next to your favorite navigation app in split view.
 
 #### What Sail Buddy does ####
 
-* Displays course and speed in a large, easily read display
-* Displays [NMEA data](#nmea) the same way: TCP and UDP connections are supported
+* Displays course, speed, and many other navigational data points in a large, easily read display
+  that you can design and customize yourself
+* Displays [NMEA data](#nmea) via TCP and UDP WiFi connections
 * Monitors and displays all "raw" NMEA data on a [separate tab](#monitor). You can filter by NMEA code or export
   the raw data to assist in troubleshooting your setup.
 * Route tracking with full capture of GPS and NMEA data (a feature I couldn't find in other apps). Saved trips can be viewed on
@@ -78,8 +79,9 @@ next to your favorite navigation app in split view.
 
 ##### New in Version 5 #####
 
-Version 5 allows you full control over the selection of data fields, their order and appearance.
-You can optimize the display to match your boat and your style of navigation:
+Version 5 gives you full control over the selection of data fields, their order and appearance.
+You can optimize the display to match your boat and your style of navigation, showing just
+the fields that interest you, in any order you want.
 
 * Click the Configure button in the top right corner of the instruments view to add or configure fields
 * Click the Add button to add new fields to the display
