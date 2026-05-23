@@ -93,6 +93,8 @@ Additionally you can:
 * Display local time or GMT in the data table
 * Display Depth Below Keel (DBK) or Below Surface (DBS) directly from your depth gauge, or
   have Sail Buddy calculate these for you based on Depth Below Transducer (DBT)
+* A new option in Display Settings disables your screen's Auto-Lock whenever Sail Buddy is active
+  (GPS and/or NMEA are on). This will obviously consume more battery power. 
 * Several other options in Settings have been simplified
 
 
